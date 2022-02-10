@@ -1,0 +1,30 @@
+
+TY  - JOUR
+T1  - COMPENSATING FOR OUR LOAD OF MUTATIONS: FREEZING THE MELTDOWN OF SMALL POPULATIONS
+AU  - Poon, Art
+AU  - Otto, Sarah P.
+Y1  - 2000/10/01
+PY  - 2000
+DA  - 2000/10/01
+N1  - https://doi.org/10.1111/j.0014-3820.2000.tb00693.x
+DO  - https://doi.org/10.1111/j.0014-3820.2000.tb00693.x
+T2  - Evolution
+JF  - Evolution
+JO  - Evolution
+SP  - 1467
+EP  - 1479
+VL  - 54
+IS  - 5
+KW  - Compensatory mutation
+KW  - conservation genetics
+KW  - drift load
+KW  - extinction
+KW  - Fisher's model
+KW  - mutational meltdown
+PB  - John Wiley & Sons, Ltd
+SN  - 0014-3820
+M3  - https://doi.org/10.1111/j.0014-3820.2000.tb00693.x
+UR  - https://doi.org/10.1111/j.0014-3820.2000.tb00693.x
+Y2  - 2021/04/04
+N2  - Abstract We have investigated the reduction of fitness caused by the fixation of new deleterious mutations in small populations within the framework of Fisher's geometrical model of adaptation. In Fisher's model, a population evolves in an n-dimensional character space with an adaptive optimum at the origin. The model allows us to investigate compensatory mutations, which restore fitness losses incurred by other mutations, in a context-dependent manner. We have conducted a moment analysis of the model, supplemented by the numerical results of computer simulations. The mean reduction of fitness (i.e., expected load) scaled to one is approximately n/(n + 2Ne), where Ne is the effective population size. The reciprocal relationship between the load and Ne implies that the fixation of deleterious mutations is unlikely to cause extinction when there is a broad scope for compensatory mutations, except in very small populations. Furthermore, the dependence of load on n implies that pleiotropy plays a large role in determining the extinction risk of small populations. Differences and similarities between our results and those of a previous study on the effects of Ne and n are explored. That the predictions of this model are qualitatively different from studies ignoring compensatory mutations implies that we must be cautious in predicting the evolutionary fate of small populations and that additional data on the nature of mutations is of critical importance.
+ER  - 

@@ -1,0 +1,13 @@
+TY  - JOUR
+T1  - Muller&#039;s ratchet under epistatic selection.
+JF  - Genetics
+JO  - Genetics
+SP  - 1469
+LP  - 1473
+VL  - 136
+IS  - 4
+AU  - Kondrashov, A S
+Y1  - 1994/04/01
+UR  - http://www.genetics.org/content/136/4/1469.abstract
+N2  - In a finite asexual population mean fitness may decrease by a process known as Muller&#039;s ratchet, which proceeds if all individuals with the minimum number of deleterious alleles are randomly lost. If these alleles have independent effects on fitness, previous analysis suggested that the rate of this decrease either remains constant or, if accumulation of mutations leads to the decline of the population size, grows. Here I show that this conclusion is quite sensitive to the assumption of independence. If deleterious alleles have synergistic fitness effects, then, as the ratchet advances, the frequency of the best available genotype will necessarily increase, making its loss less and less probable. As a result, sufficiently strong synergistic epistasis can effectively halt the action of Muller&#039;s ratchet. Instead of being driven extinct, a finite asexual population could then survive practically indefinitely, although with lower mean fitness than without random drift.
+ER  - 

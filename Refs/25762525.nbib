@@ -1,0 +1,81 @@
+PMID- 25762525
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20160208
+LR  - 20190108
+IS  - 1943-2631 (Electronic)
+IS  - 0016-6731 (Print)
+IS  - 0016-6731 (Linking)
+VI  - 200
+IP  - 1
+DP  - 2015 May
+TI  - The evolutionarily stable distribution of fitness effects.
+PG  - 321-9
+LID - 10.1534/genetics.114.173815 [doi]
+AB  - The distribution of fitness effects (DFE) of new mutations is a key parameter in 
+      determining the course of evolution. This fact has motivated extensive efforts to 
+      measure the DFE or to predict it from first principles. However, just as the DFE 
+      determines the course of evolution, the evolutionary process itself constrains the 
+      DFE. Here, we analyze a simple model of genome evolution in a constant environment 
+      in which natural selection drives the population toward a dynamic steady state where 
+      beneficial and deleterious substitutions balance. The distribution of fitness 
+      effects at this steady state is stable under further evolution and provides a 
+      natural null expectation for the DFE in a population that has evolved in a constant 
+      environment for a long time. We calculate how the shape of the evolutionarily stable 
+      DFE depends on the underlying population genetic parameters. We show that, in the 
+      absence of epistasis, the ratio of beneficial to deleterious mutations of a given 
+      fitness effect obeys a simple relationship independent of population genetic 
+      details. Finally, we analyze how the stable DFE changes in the presence of a simple 
+      form of diminishing-returns epistasis.
+CI  - Copyright © 2015 by the Genetics Society of America.
+FAU - Rice, Daniel P
+AU  - Rice DP
+AD  - Department of Organismic and Evolutionary Biology and FAS Center for Systems 
+      Biology, Harvard University, Cambridge, Massachusetts 02138.
+FAU - Good, Benjamin H
+AU  - Good BH
+AD  - Department of Organismic and Evolutionary Biology and FAS Center for Systems 
+      Biology, Harvard University, Cambridge, Massachusetts 02138 Department of Physics, 
+      Harvard University, Cambridge, Massachusetts 02138.
+FAU - Desai, Michael M
+AU  - Desai MM
+AD  - Department of Organismic and Evolutionary Biology and FAS Center for Systems 
+      Biology, Harvard University, Cambridge, Massachusetts 02138 Department of Physics, 
+      Harvard University, Cambridge, Massachusetts 02138 mdesai@oeb.harvard.edu.
+LA  - eng
+GR  - R01 GM104239/GM/NIGMS NIH HHS/United States
+GR  - GM104239/GM/NIGMS NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+PT  - Research Support, U.S. Gov't, Non-P.H.S.
+DEP - 20150310
+TA  - Genetics
+JT  - Genetics
+JID - 0374636
+SB  - IM
+MH  - Epistasis, Genetic
+MH  - *Evolution, Molecular
+MH  - *Genetic Fitness
+MH  - Haploidy
+MH  - *Models, Genetic
+MH  - Mutation
+MH  - Selection, Genetic
+PMC - PMC4423373
+OTO - NOTNLM
+OT  - distribution of fitness effects
+OT  - evolutionary equilibrium
+OT  - mutation–selection–drift balance
+EDAT- 2015/03/13 06:00
+MHDA- 2016/02/09 06:00
+CRDT- 2015/03/13 06:00
+PHST- 2014/12/20 00:00 [received]
+PHST- 2015/03/07 00:00 [accepted]
+PHST- 2015/03/13 06:00 [entrez]
+PHST- 2015/03/13 06:00 [pubmed]
+PHST- 2016/02/09 06:00 [medline]
+AID - genetics.114.173815 [pii]
+AID - 173815 [pii]
+AID - 10.1534/genetics.114.173815 [doi]
+PST - ppublish
+SO  - Genetics. 2015 May;200(1):321-9. doi: 10.1534/genetics.114.173815. Epub 2015 Mar 10.

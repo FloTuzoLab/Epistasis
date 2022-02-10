@@ -1,0 +1,30 @@
+
+TY  - JOUR
+T1  - COMPLEXITY, PLEIOTROPY, AND THE FITNESS EFFECT OF MUTATIONS
+AU  - Lourenço, João
+AU  - Galtier, Nicolas
+AU  - Glémin, Sylvain
+Y1  - 2011/06/01
+PY  - 2011
+DA  - 2011/06/01
+N1  - https://doi.org/10.1111/j.1558-5646.2011.01237.x
+DO  - https://doi.org/10.1111/j.1558-5646.2011.01237.x
+T2  - Evolution
+JF  - Evolution
+JO  - Evolution
+SP  - 1559
+EP  - 1571
+VL  - 65
+IS  - 6
+KW  - Drift load
+KW  - genetic drift
+KW  - models
+KW  - molecular evolution
+KW  - natural selection
+PB  - John Wiley & Sons, Ltd
+SN  - 0014-3820
+M3  - https://doi.org/10.1111/j.1558-5646.2011.01237.x
+UR  - https://doi.org/10.1111/j.1558-5646.2011.01237.x
+Y2  - 2021/04/04
+N2  - One of the assumptions underlying many theoretical predictions in evolutionary biology concerns the distribution of the fitness effect of mutations. Approximations to this distribution have been derived using various theoretical approaches, of which Fisher's geometrical model is among the most popular ones. Two key concepts in this model are complexity and pleiotropy. Recent studies have proposed different methods for estimating how complexity varies across species, but their results have been contradictory. Here, we show that contradictory results are to be expected when the assumption of universal pleiotropy is violated. We develop a model in which the two key parameters are the total number of traits and the mean number of traits affected by a single mutation. We derive approximations for the distribution of the fitness effect of mutations when populations are either well-adapted or away from the optimum. We also consider drift load in a well-adapted population and show that it is independent of the distribution of the fitness effect of mutations. We show that mutation accumulation experiments can only measure the effect of the mean number of traits affected by mutations, whereas drift load only provides information about the total number of traits. We discuss the plausibility of the model.
+ER  - 

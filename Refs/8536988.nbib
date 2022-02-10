@@ -1,0 +1,54 @@
+PMID- 8536988
+OWN - NLM
+STAT- MEDLINE
+DCOM- 19960208
+LR  - 20181113
+IS  - 0016-6731 (Print)
+IS  - 0016-6731 (Linking)
+VI  - 141
+IP  - 1
+DP  - 1995 Sep
+TI  - Muller's ratchet, epistasis and mutation effects.
+PG  - 431-7
+AB  - In this study, computer simulation is used to show that despite synergistic 
+      epistasis for fitness, Muller's ratchet can lead to lethal fitness loss in a 
+      population of asexuals through the accumulation of deleterious mutations. This 
+      result contradicts previous work that indicated that epistasis will halt the 
+      ratchet. The present results show that epistasis will not halt the ratchet provided 
+      that rather than a single deleterious mutation effect, there is a distribution of 
+      deleterious mutation effects with sufficient density near zero. In addition to 
+      epistasis and mutation distribution, the ability of Muller's ratchet to lead to the 
+      extinction of an asexual population under epistasis for fitness depends strongly on 
+      the expected number of offspring that survive to reproductive age. This strong 
+      dependence is not present in the nonepistatic model and suggests that interpreting 
+      the population growth parameter as fecundity is inadequate. Because a continuous 
+      distribution of mutation effects is used in this model, an emphasis is placed on the 
+      dynamics of the mutation effect distribution rather than on the dynamics of the 
+      number of least mutation loaded individuals. This perspective suggests that current 
+      models of gene interaction are too simple to apply directly to long-term prediction 
+      for populations undergoing the ratchet.
+FAU - Butcher, D
+AU  - Butcher D
+AD  - Department of Biology, University of Oregon, Eugene 97403, USA.
+LA  - eng
+PT  - Journal Article
+PT  - Research Support, U.S. Gov't, Non-P.H.S.
+TA  - Genetics
+JT  - Genetics
+JID - 0374636
+SB  - IM
+MH  - *Computer Simulation
+MH  - *Epistasis, Genetic
+MH  - Genetics, Population
+MH  - *Models, Genetic
+MH  - Mutation
+PMC - PMC1206738
+EDAT- 1995/09/01 00:00
+MHDA- 1995/09/01 00:01
+CRDT- 1995/09/01 00:00
+PHST- 1995/09/01 00:00 [pubmed]
+PHST- 1995/09/01 00:01 [medline]
+PHST- 1995/09/01 00:00 [entrez]
+AID - 1411431 [pii]
+PST - ppublish
+SO  - Genetics. 1995 Sep;141(1):431-7.

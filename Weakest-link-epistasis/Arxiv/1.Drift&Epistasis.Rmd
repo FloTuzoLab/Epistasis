@@ -1,0 +1,393 @@
+---
+title: "High(er) order epistasis and strength of drift"
+author: "Florian Labourel"
+output:
+  pdf_document: default
+  html_document: default
+header-includes: \usepackage{amsmath}
+---
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+## Why on earth should we worry about effects of epistasis: an idea coming from cellular models of fitness?
+
+Enzyme-substrate reactions (see top panel of the figure below) rely on the binding (at a rate $k_f$) between these two molecules, that can then either dissociate (at a rate $k_r$, these pointless meetings decrease the rate of the reaction) or undergo the process of catalysis (at a rate $k_{cat}$) that releases the enzyme and a newly formed product. Therefore, Evolution should in first approach maximise both $k_f$ and $k_{cat}$. The process can be described through Michaelis-Menten equation, where the flux at steady-state is given by the following equation:
+
+\begin{equation}
+v=k_{cat}.[E_\text{tot}].\frac{[S]}{K_\text{M}+[S]},
+\label{EquiBHsimp}
+\end{equation}
+\noindent under the assumption that the concentration $[S]$ is approximately constant and that of $[ES]$ is at equilibrium \citep{MichaelisMenten1913, Briggs25}. In this equation, $K_M=\dfrac{k_\text{r}+k_\text{cat}}{k_\text{f}}$ represents an affinity term: the lower the better.
+
+In this framework, it is possible to study the kinetic efficiency of enzymes. When we do so, the results is quite unexpected: enzymes seem to belong to a zoo where variation is the rule (see three panels below). One may then wonder why most enzymes are so far from their kinetic optimum (and so different one from another).
+
+```{r enzoo, echo=FALSE, fig.cap="Enzyme zoo: widespread (and yet to be explained) variation in enzyme kinetics (source: Bar-Even et al., 2011)", out.width = '100%',fig.align='center'}
+knitr::include_graphics("Enzyme_zoo.png")
+```
+
+\newpage
+
+When introducing more parameters, enzymes generally evolve on plateau-like fitness landscapes (results from many diferent theories: control of flux (Kacser and Burns, 73; Rapoport and Heinrich, 74; Dykhuizen, 88), protein stability, metabolix flux analysis; see right panel on the following figure); nonetheless, we have shown that several parameters are involved in the fitness landscapes on which enzymes evolve, one of which is the level of the flux an enzyme has to sustain:
+
+```{r enzooexplain, echo=FALSE, fig.cap="Enzyme zoo, some pieces of explanation: the levels of flux in a given pathway", out.width = '100%',fig.align='center'}
+knitr::include_graphics("Enzyme_zoo_explanation.png")
+```
+
+But still, enzymes should be far more efficient and $N_e$ should be a (if not the) major driver of their evolution as population genetics assuming realistic mutational landscapes shown:
+
+```{r enzsim, echo=FALSE, fig.cap="Enzyme zoo: the paradox of ", out.width = '70%',fig.align='center'}
+knitr::include_graphics("Enzyme_simulated.png")
+```
+
+One explanation of why Evolution underperforms (if it is the case - some biophysicists think that cells may be tuned to sustain specific flux levels rather than ; others think that some physics constraints may be impossible to escape such that they disable Evolution to act as it should be) is the existence of epistasis between enzymes.
+
+\newpage
+
+## Brief recall about epistasis
+
+Epistasis: process by which the effect of the mutation is dependent on the genetic background in which it appears. In other words, it is the part of variance that cannot be explained by effects of additivity or dominance. When two mutations are present, there is a departure from the prediction of additivity (additivity: first case in the figure below; different kind of epistasis are shown next to it).
+
+```{r epi_gen, echo=FALSE, fig.cap="Weinreich definition: epistasis (three panels on the right) is a measure of our surprise", out.width = '100%',fig.align='center'}
+knitr::include_graphics("Epistasis_description.png")
+```
+
+Epistasis has long been discussed in the case of the fitness landscape analogy that describes Evolution as a climbing process that may or may not be deterministic. More particularly, it has been demonstrated that in a constant environment, where organisms can be represented on one and only one fitness landscape, rugged landscape can arise if and only if there is some reciprocal sign epistasis, which produces valleys (and potentially ruggedness) separating different peaks that opens the door to evolutionary contingency.
+
+```{r epifit, echo=FALSE, fig.cap="Epistasis and fitness", out.width = '100%',fig.align='center'}
+knitr::include_graphics("Sign_epistasis&fitnessPeaks.png")
+```
+
+The idea here is to study the case of complementary epistasis when it involves a large number of loci/genes/modules all needed in order to perform a given task at a given level (eg. enzymes involved in a metabolic pathway: if one is worse than the others, the flux is decreased; different cellular pathways: producing a lot of a given amino-acid may be useless if ribosomes are too slow to use them, or if nucleotids are produced at a slower pace (relatively to that of the aforementionned amino-acid; a very efficient stomach might be useless if the gut or the liver underperforms).
+
+## The particular case of complementary epistasis
+
+Complementary epistasis : both genes are needed to give rise to a new phenotype as shown below (A and B can only produce their effect if they are expressed together; otherwise, none of them has any effect at all (to study it in a generic case) - neutral mutation). This is well-known for pigment coloration in corn, for instance, where changing the color relies on the presence of two mutations (in some cases).
+
+```{r compepi, echo=FALSE, fig.cap="Complementary epistasis and fitness isoclines", out.width = '100%',fig.align='center'}
+knitr::include_graphics("Complementary_epistasis.png")
+```
+
+Under such assumptions, increasing fitness relies on a two-step process: first, a dormant advantageous mutation has to evolve through drift as its effect on fitness is perfectly neutral. Only then fitness can be improved thanks to a second advantageous mutation occuring on the complementary gene.
+
+```{r trajcompepi, echo=FALSE, fig.cap="Complementary epistasis and evolutionary trajectories: only the last beneficial mutation gives an extra fitness to its carrier", out.width = '100%',fig.align='center'}
+knitr::include_graphics("Evo_Complementary_epistasis.png")
+```
+
+As it is cumbersome to draw hypervolume with many dimensions, we got focused on the simplistic case of two complementary genes. One way then wonder what would happen if higher order epistasis comes into play.
+
+High(er) order epistasis : epistatic interactions depend on a high number of interactions (>>2 genes)
+
+## First studies on the influence of the combination of drift and high(er) order epistasis
+
+Some authors have recently raised the need to address this process (in the case of enzyme turn-over numbers $k_{cat}$s for instance). In their model, the fitness of cells result from the complex combination of thousands of enzymes whose $k_{cat}$s can undergo mutations. Mutation fixation of one variant is computed by a random draw from a binomial distribution with (Kimura:61)'s formula for fixation probability.
+
+```{r Heckmann_title, echo=FALSE, out.width = '100%',fig.align='center'}
+knitr::include_graphics("Heckmannetal..png")
+```
+
+And they have shown that it may account for the wide variability among enzymes efficiency within an organism, as their outcomes recnstruct most of this variability:
+
+```{r simkcat, echo=FALSE, fig.cap="Turn-over numbers hit a ceiling in the different pathways", out.width = '100%',fig.align='center'}
+knitr::include_graphics("Heckmann_comparison.png")
+```
+
+Here, the authors fixed some enzymes to moderate values for there seems to exist an upper-limit to some of them (dubious to me in first approach, see their explanations in the quotation reported below). This strong assumption limits the interest of their findings to me and might explain alone that enzymes are stuck to low values in their model.
+
+```{r constenz, echo=FALSE, fig.cap="Explanations about constrained enzymes from Heckamnn et al.(2019)", out.width = '50%',fig.align='center'}
+knitr::include_graphics("Constrained_enzymes_Heckmann.png")
+```
+
+The aim of the present document is to test what would happen when an enzyme's fitness depends on its genetic background in a complementary fashion (and in other cases for which this framework could make some sense) and, more specifically, how biased mutations - towards deleterious effects - would affect the evolutionary process.
+
+## A toy model to test the effect within a general framework
+
+1) Fitness is determined by the selective value of the worst enzyme of an organism. Eg. set of 3 enzymes with selective value (0.9,0.95,1) yields a fitness of 0.9
+
+2) A time-step corresponds to a mutational event conerning one gene/module of the set. Each mutation can then invade the population or be removed during the timestep (no polymorphism occurs here, to stay as simple as possible). Its probability of fixation depends on the gain of fitness (to the haploid organism) it provides, according to Kimura equation (Kimura,1961):
+
+```{r}
+#Fixation probability
+u_exact<-function(s,Ne,p){
+  return((1-exp(-2*Ne*s*p))/(1-exp(-2*Ne*s)))
+}
+```
+
+Note: If a mutation improves an enzyme that is not the worst one, its probability of fixation is that of a neutral mutation.
+
+3) Mutations are drawn randomly from beta distributions with different properties (4 cases), as shown below:
+
+```{r,echo=FALSE, fig.cap="Distribution of fitness effects of mutations in the different cases", out.width = '90%',fig.align='center'}
+b_ds_set=c(-5*10^-1,-10^-1)
+beta_set=c(1,2)
+bias_leg_set=c("High bias","Low bias")
+centered_distribution_set=c("decentered distribution","centered distribution")
+
+par(mfrow=c(2,2),mai=c(0.4,0.8,0.4,0.8))
+for(i in 1:2){
+  for(j in 1:2){
+  bias_leg=bias_leg_set[i]
+  centered_distribution=centered_distribution_set[j]
+  b_ds=b_ds_set[i]
+  beta=beta_set[j]
+  curve(dbeta(x,0.5*(1+b_ds)/(1-0.5*(1+b_ds))*beta,beta),col = "blue",main=paste(bias_leg,"&",centered_distribution), xlab = "Fitness value", ylab = "Density", xlim=c(0,1),ylim=c(0,10),cex.main=0.75)
+  curve(dbeta(x,1*(0.9+b_ds)/(1-0.9*(1+b_ds))*beta,beta),col = "gold",add=TRUE)
+  curve(dbeta(x,1*(1+b_ds)/(1-1*(1+b_ds))*beta,beta),col = "red",add=TRUE)
+  legend("top",legend=c("f=0.5","f=0.9","f=1"),lty=1,col=c("blue","gold","red"),cex=0.75)
+  }
+}
+```
+
+Note: the distribution of fitness effects is dependent on the present value of the gene (latent) fitness. In other words, a better enzyme has a higher mutational average fitness (eg. an enzyme with fitness 1 (maximum) have more mutations that yield a fitness f=1 than en enzyme with fitness 0.5). 
+
+4) The initial fitness value of each enzyme/gene/locus is set to the rather high value of $0.9$, sufficiently far away from high values to avoid boundary conditions problems (unclear why it is a problem at this point, may be creating some nearly absorbing states).
+#, the (Kimura) expected outcome of Evolution when there is a high mutational bias towards deleterious effects.
+
+## Results of the toy model
+
+Simulations are ran over an average of $100N_e$ mutational events occuring on each module, with 30 replicates for each set of parameters. The first case considers here considers that $N_e=10$, for which we report fitness outcomes when the evolutionary steady-state has been reached:
+
+```{r hoe_out_10, echo=FALSE, fig.cap="Very preliminary simulation outcomes ($N_e=10$) : effect of complementary epistasis on fitness at evolutionary steady-state", out.width = '100%',fig.align='center'}
+N_pop_set=c(10)
+N_pop=N_pop_set[1]
+beta_set=c(1,2)
+N_mod_set=c(1,2,5,10)
+N_rep=30
+bias<-c(rep(rep(b_ds_set[1],length(beta_set)*length(N_mod_set)),N_rep),rep(rep(b_ds_set[2],length(beta_set)*length(N_mod_set)),N_rep))
+dist_mut<-rep(c(rep(c(rep(beta_set[1],length(N_mod_set))),N_rep),rep(c(rep(beta_set[2],length(N_mod_set))),N_rep)),length(beta_set))
+N_mod_data<-rep(c(rep(N_mod_set[1],N_rep),rep(N_mod_set[2],N_rep),rep(N_mod_set[3],N_rep),rep(N_mod_set[4],N_rep)),length(N_mod_set))
+data<-cbind(bias,dist_mut,N_mod_data)
+fit_results<-c()
+mod_fit_results<-list()
+i=0      
+for(b in 1:length(b_ds_set)){
+  b_ds=b_ds_set[b]
+  for(be in 1:length(beta_set)){
+    beta=beta_set[be]
+    for(m in 1:length(N_mod_set)){
+      N_mod=N_mod_set[m]
+      N_mut=N_mod*N_pop*10^2
+      for (r in 1:N_rep){
+        #print(paste(b,be,m,r))
+        i=i+1
+        f=1-1/N_pop
+        #f=0.1
+        f_tab<-rep(f,N_mod)
+        for (t in 1:N_mut){
+          pos_mut<-trunc(runif(1,1,N_mod+1))
+          #print(pos_mut)
+          f<-min(f_tab)
+          f_curr<-rbeta(1,shape1=f_tab[pos_mut]*(1+b_ds)/(1-f_tab[pos_mut]*(1+b_ds))*beta,shape2=beta)
+          #print(f_curr)
+          if(f_curr==f_tab[pos_mut]){
+          }
+          else if(f_curr<=10^-2){
+            fix_prob=0
+          }
+          else if(f_tab[pos_mut]==f){
+            #print(paste(f_curr,f_tab[pos_mut]))
+            fix_prob=u_exact(f_curr-f_tab[pos_mut],N_pop,1/N_pop)
+            #print(fix_prob)
+          }
+          else{
+            fix_prob=1/N_pop
+          }
+          #print(paste(t,fix_prob))
+          mut_fix=rbinom(1,1,fix_prob)
+          if(mut_fix==1){
+            #print("YES")
+            f_tab[pos_mut]=f_curr
+          }
+        }
+        fit_results[i]=f
+        mod_fit_results[[i]]=f_tab
+      }
+    }
+  }
+}
+data<-cbind(data,fit_results)
+data<-data.frame(data)
+#par(mfrow=c(1,1))
+#boxplot(data$fit_results)
+
+par(mfrow=c(2,2))
+for(i in 1:2){
+  for(j in 1:2){
+    bias_leg=bias_leg_set[i]
+    centered_distribution=centered_distribution_set[j]
+    b_ds=b_ds_set[i]
+    #print(b_ds)
+    beta=beta_set[j]
+    #print(beta)
+    boxplot(data$fit_results[data$bias==b_ds & data$dist_mut==beta]~data$N_mod_data[data$bias==b_ds & data$dist_mut==beta],ylim=c(0,1), xlab = "Number of complementary modules", ylab = "Fitness",main=paste(bias_leg,"&",centered_distribution),cex.main=0.8)
+    abline(h=1-1/N_pop,col="red")
+  }
+}
+```
+
+The following reults display what happens for fitness when $N_e=100$:
+
+```{r hoe_out_100, echo=FALSE, fig.cap="Very preliminary simulation outcomes ($N_e=100$) : effect of complementary epistasis on fitness at evolutionary steady-state", out.width = '100%',fig.align='center'}
+N_pop_set=c(100)
+N_pop=N_pop_set[1]
+beta_set=c(1,2)
+N_mod_set=c(1,2,5,10)
+N_rep=30
+bias<-c(rep(rep(b_ds_set[1],length(beta_set)*length(N_mod_set)),N_rep),rep(rep(b_ds_set[2],length(beta_set)*length(N_mod_set)),N_rep))
+dist_mut<-rep(c(rep(c(rep(beta_set[1],length(N_mod_set))),N_rep),rep(c(rep(beta_set[2],length(N_mod_set))),N_rep)),length(beta_set))
+N_mod_data<-rep(c(rep(N_mod_set[1],N_rep),rep(N_mod_set[2],N_rep),rep(N_mod_set[3],N_rep),rep(N_mod_set[4],N_rep)),length(N_mod_set))
+data<-cbind(bias,dist_mut,N_mod_data)
+fit_results<-c()
+mod_fit_results<-list()
+i=0      
+for(b in 1:length(b_ds_set)){
+  b_ds=b_ds_set[b]
+  for(be in 1:length(beta_set)){
+    beta=beta_set[be]
+    for(m in 1:length(N_mod_set)){
+      N_mod=N_mod_set[m]
+      N_mut=N_mod*N_pop*100
+      for (r in 1:N_rep){
+        #print(paste(b,be,m,r))
+        i=i+1
+        f=0.9
+        #f=0.1
+        f_tab<-rep(f,N_mod)
+        for (t in 1:N_mut){
+          pos_mut<-trunc(runif(1,1,N_mod+1))
+          #print(pos_mut)
+          f<-min(f_tab)
+          f_curr<-rbeta(1,shape1=f_tab[pos_mut]*(1+b_ds)/(1-f_tab[pos_mut]*(1+b_ds))*beta,shape2=beta)
+          #print(f_curr)
+          if(f_curr==f_tab[pos_mut]){
+          }
+          else if(f_curr<=10^-2){
+            fix_prob=0
+          }
+          else if(f_tab[pos_mut]==f){
+            #print(paste(f_curr,f_tab[pos_mut]))
+            fix_prob=u_exact(f_curr-f_tab[pos_mut],N_pop,1/N_pop)
+            #print(fix_prob)
+          }
+          else{
+            fix_prob=1/N_pop
+          }
+          #print(paste(t,fix_prob))
+          mut_fix=rbinom(1,1,fix_prob)
+          if(mut_fix==1){
+            #print("YES")
+            f_tab[pos_mut]=f_curr
+          }
+        }
+        fit_results[i]=f
+        mod_fit_results[[i]]=f_tab
+      }
+    }
+  }
+}
+data<-cbind(data,fit_results)
+data<-data.frame(data)
+#par(mfrow=c(1,1))
+#boxplot(data$fit_results)
+
+par(mfrow=c(2,2))
+for(i in 1:2){
+  for(j in 1:2){
+    bias_leg=bias_leg_set[i]
+    centered_distribution=centered_distribution_set[j]
+    b_ds=b_ds_set[i]
+    #print(b_ds)
+    beta=beta_set[j]
+    #print(beta)
+    boxplot(data$fit_results[data$bias==b_ds & data$dist_mut==beta]~data$N_mod_data[data$bias==b_ds & data$dist_mut==beta],ylim=c(0,1), xlab = "Number of complementary modules", ylab = "Fitness",main=paste(bias_leg,"&",centered_distribution),cex.main=0.8)
+    abline(h=1-1/N_pop,col="red")
+  }
+}
+```
+
+The following reults display what happens for fitness when $N_e=1000$:
+
+```{r hoe_out_1000, echo=FALSE, fig.cap="Very preliminary simulation outcomes ($N_e=1000$) : effect of complementary epistasis on fitness at evolutionary steady-state", out.width = '100%',fig.align='center'}
+N_pop_set=c(10^3)
+N_pop=N_pop_set[1]
+beta_set=c(1,2)
+N_mod_set=c(1,2,5,10)
+N_rep=30
+bias<-c(rep(rep(b_ds_set[1],length(beta_set)*length(N_mod_set)),N_rep),rep(rep(b_ds_set[2],length(beta_set)*length(N_mod_set)),N_rep))
+dist_mut<-rep(c(rep(c(rep(beta_set[1],length(N_mod_set))),N_rep),rep(c(rep(beta_set[2],length(N_mod_set))),N_rep)),length(beta_set))
+N_mod_data<-rep(c(rep(N_mod_set[1],N_rep),rep(N_mod_set[2],N_rep),rep(N_mod_set[3],N_rep),rep(N_mod_set[4],N_rep)),length(N_mod_set))
+data<-cbind(bias,dist_mut,N_mod_data)
+fit_results<-c()
+mod_fit_results<-list()
+i=0      
+for(b in 1:length(b_ds_set)){
+  b_ds=b_ds_set[b]
+  for(be in 1:length(beta_set)){
+    beta=beta_set[be]
+    for(m in 1:length(N_mod_set)){
+      N_mod=N_mod_set[m]
+      N_mut=N_mod*N_pop*100
+      for (r in 1:N_rep){
+        #print(paste(b,be,m,r))
+        i=i+1
+        f=0.9
+        #f=0.1
+        f_tab<-rep(f,N_mod)
+        for (t in 1:N_mut){
+          pos_mut<-trunc(runif(1,1,N_mod+1))
+          #print(pos_mut)
+          f<-min(f_tab)
+          f_curr<-rbeta(1,shape1=f_tab[pos_mut]*(1+b_ds)/(1-f_tab[pos_mut]*(1+b_ds))*beta,shape2=beta)
+          #print(f_curr)
+          if(f_curr==f_tab[pos_mut]){
+          }
+          else if(f_curr<=10^-2){
+            fix_prob=0
+          }
+          else if(f_tab[pos_mut]==f){
+            #print(paste(f_curr,f_tab[pos_mut]))
+            fix_prob=u_exact(f_curr-f_tab[pos_mut],N_pop,1/N_pop)
+            #print(fix_prob)
+          }
+          else{
+            fix_prob=1/N_pop
+          }
+          #print(paste(t,fix_prob))
+          mut_fix=rbinom(1,1,fix_prob)
+          if(mut_fix==1){
+            #print("YES")
+            f_tab[pos_mut]=f_curr
+          }
+        }
+        fit_results[i]=f
+        mod_fit_results[[i]]=f_tab
+      }
+    }
+  }
+}
+data<-cbind(data,fit_results)
+data<-data.frame(data)
+#par(mfrow=c(1,1))
+#boxplot(data$fit_results)
+
+par(mfrow=c(2,2))
+for(i in 1:2){
+  for(j in 1:2){
+    bias_leg=bias_leg_set[i]
+    centered_distribution=centered_distribution_set[j]
+    b_ds=b_ds_set[i]
+    #print(b_ds)
+    beta=beta_set[j]
+    #print(beta)
+    boxplot(data$fit_results[data$bias==b_ds & data$dist_mut==beta]~data$N_mod_data[data$bias==b_ds & data$dist_mut==beta],
+            ylim=c(min(data$fit_results[data$bias==b_ds & data$dist_mut==beta])-0.01,max(data$fit_results[data$bias==b_ds & data$dist_mut==beta])+0.01), xlab = "Number of complementary modules", ylab = "Fitness",main=paste(bias_leg,"&",centered_distribution),cex.main=0.8)
+    abline(h=1-1/N_pop,col="red")
+  }
+}
+```
+
+One limit of these toy models lies in the choice of the distribution, which may trap the fitness in absorbing states (at very low values or very high values), especially when $N_e$ increases, as very few mutations of the neutral area are sampled. Note that for the last results, the scale was adjusted in the bottom panels to facilitate their visualization.
+
+What one can see is that outcomes are largely dependent on both the fitness effect distribution and the amount of complementary modules/genes (locus?) such that this process may help explain why most mutations are evolving under neutral evolution even if they might be necessary pieces to increase fitness. More importantly, it might help reconcile the paradox between the fact that many genes seem to evolve under neutrality while these genes still lie far from their theoretical optimum (eg. of enzymes above).

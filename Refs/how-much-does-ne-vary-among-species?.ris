@@ -1,0 +1,15 @@
+TY  - JOUR
+T1  - How Much Does &lt;em&gt;N&lt;sub&gt;e&lt;/sub&gt;&lt;/em&gt; Vary Among Species?
+JF  - Genetics
+JO  - Genetics
+SP  - 559
+LP  - 572
+DO  - 10.1534/genetics.120.303622
+VL  - 216
+IS  - 2
+AU  - Galtier, Nicolas
+AU  - Rousselle, Marjolaine
+Y1  - 2020/10/01
+UR  - http://www.genetics.org/content/216/2/559.abstract
+N2  - Genetic drift is an important evolutionary force of strength inversely proportional to Ne, the effective population size. The impact of drift on genome diversity and evolution is known to vary among species, but quantifying this effect is a difficult task. Here we assess the magnitude of variation in drift power among species of animals via its effect on the mutation load – which implies also inferring the distribution of fitness effects of deleterious mutations. To this aim, we analyze the nonsynonymous (amino-acid changing) and synonymous (amino-acid conservative) allele frequency spectra in a large sample of metazoan species, with a focus on the primates vs. fruit flies contrast. We show that a Gamma model of the distribution of fitness effects is not suitable due to strong differences in estimated shape parameters among taxa, while adding a class of lethal mutations essentially solves the problem. Using the Gamma + lethal model and assuming that the mean deleterious effects of nonsynonymous mutations is shared among species, we estimate that the power of drift varies by a factor of at least 500 between large-Ne and small-Ne species of animals, i.e., an order of magnitude more than the among-species variation in genetic diversity. Our results are relevant to Lewontin’s paradox while further questioning the meaning of the Ne parameter in population genomics.
+ER  - 

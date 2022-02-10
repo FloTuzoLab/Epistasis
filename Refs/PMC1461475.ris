@@ -1,0 +1,33 @@
+TY  - JOUR
+DB  - PubMed
+AU  - Zeyl, C
+AU  - DeVisser, J A
+T1  - Estimates of the rate and distribution of fitness effects of spontaneous mutation in Saccharomyces cerevisiae
+LA  - eng
+SN  - 0016-6731
+Y1  - 2001/01/
+AB  - The per-genome, per-generation rate of spontaneous mutation affecting fitness (U) and the mean fitness cost per mutation (s) are important parameters in evolutionary genetics, but have been estimated for few species. We estimated U and sh (the heterozygous effect of mutations) for two diploid yeast strains differing only in the DNA mismatch-repair deficiency used to elevate the mutation rate in one (mutator) strain. Mutations were allowed to accumulate in 50 replicate lines of each strain, during 36 transfers of randomly chosen single colonies (approximately 600 generations). Among wild-type lines, fitnesses were bimodal, with one mode showing no change in mean fitness. The other mode showed a mean 29.6% fitness decline and the petite phenotype, usually caused by partial deletion of the mitochondrial genome. Excluding petites, maximum-likelihood estimates adjusted for the effect of selection were U = 9.5 x 10(-5) and sh = 0.217 for the wild type. Among the mutator lines, the best fit was obtained with 0.005 < or = U < or = 0.94 and 0.049 > or = sh > or = 0.0003. Like other recently tested model organisms, wild-type yeast have low mutation rates, with high mean fitness costs per mutation. Inactivation of mismatch repair increases the frequency of slightly deleterious mutations by approximately two orders of magnitude.
+SP  - 53
+EP  - 61
+VL  - 157
+IS  - 1
+AN  - 11139491
+UR  - https://pubmed.ncbi.nlm.nih.gov/11139491
+L2  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1461475/
+U1  - 11139491[pmid]
+U2  - PMC1461475[pmcid]
+J2  - Genetics
+JF  - Genetics
+KW  - Base Pair Mismatch/genetics
+KW  - Biological Evolution
+KW  - DNA Repair/genetics
+KW  - DNA-Binding Proteins/genetics
+KW  - Fungal Proteins/genetics
+KW  - Genotype
+KW  - Models, Genetic
+KW  - MutS Homolog 2 Protein
+KW  - *Mutation
+KW  - Phenotype
+KW  - Saccharomyces cerevisiae/*genetics/metabolism
+KW  - *Saccharomyces cerevisiae Proteins
+ER  - 

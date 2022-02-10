@@ -1,0 +1,18 @@
+TY  - JOUR
+T1  - Quantifying Organismal Complexity using a Population Genetic Approach
+A1  - Tenaillon, Olivier
+A1  - Silander, Olin K.
+A1  - Uzan, Jean-Philippe
+A1  - Chao, Lin
+Y1  - 2007/02/14
+N2  - Background Various definitions of biological complexity have been proposed: the number of genes, cell types, or metabolic processes within an organism. As knowledge of biological systems has increased, it has become apparent that these metrics are often incongruent.   Methodology Here we propose an alternative complexity metric based on the number of genetically uncorrelated phenotypic traits contributing to an organism's fitness. This metric, phenotypic complexity, is more objective than previous suggestions, as complexity is measured from a fundamental biological perspective, that of natural selection. We utilize a model linking the equilibrium fitness (drift load) of a population to phenotypic complexity. We then use results from viral evolution experiments to compare the phenotypic complexities of two viruses, the bacteriophage X174 and vesicular stomatitis virus, and to illustrate the consistency of our approach and its applicability.   Conclusions/Significance Because Darwinian evolution through natural selection is the fundamental element unifying all biological organisms, we propose that our metric of complexity is potentially a more relevant metric than others, based on the count of artificially defined set of objects.
+JF  - PLOS ONE
+JA  - PLOS ONE
+VL  - 2
+IS  - 2
+UR  - https://doi.org/10.1371/journal.pone.0000217
+SP  - e217
+EP  - 
+PB  - Public Library of Science
+M3  - doi:10.1371/journal.pone.0000217
+ER  - 

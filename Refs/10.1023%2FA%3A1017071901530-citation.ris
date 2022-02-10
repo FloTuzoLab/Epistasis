@@ -1,0 +1,17 @@
+TY  - JOUR
+AU  - Hartl, Daniel L.
+AU  - Taubes, Clifford H.
+PY  - 1998
+DA  - 1998/03/01
+TI  - Towards a theory of evolutionary adaptation
+JO  - Genetica
+SP  - 525
+EP  - 533
+VL  - 102
+IS  - 0
+AB  - Most theoretical models in population genetics fail to deal in a realistic manner with the process of mutation. They are consequently not informative about the central evolutionary problem of the origin, progression, and limit of adaptation. Here we present an explicit distribution of phenotypes expected in an ensemble of populations under a mutation-selection-drift model that allows mutations with a distribution of adaptive values to occur randomly in time. The model of mutation is a geometrical model in which the effect of a new mutation is determined by a random angle in n dimensional space and in which the adaptive value (fitness) of an organism decreases as the square of the deviation of its phenotype from an optimum. Each new mutation is subjected to random genetic drift and fixed or lost according to its selective value and the effective population number. Time is measured in number of fixation events, so that, at any point in time, each population is regarded as genetically homogeneous. In this mutation-selection-drift model, among an ensemble of populations, the equilibrium average phenotype coincides with the optimum because the distribution of positive and negative deviations from the optimum is symmetrical. However, at equilibrium, the mean of the absolute value of the deviation from the optimum equals √$$\sqrt {n/8Ns} $$, where n is the dimensionality of the trait space, N is the effective population size, and s is the selection coefficient against a mutation whose phenotype deviates by one unit from the optimum. Furthermore, at equilibrium, the average fitness across the ensemble of populations equals 1 - (n + 1)/8N. When n is sufficiently large, there is a strong mutation pressure toward the fixation of slightly deleterious mutations. This feature relates our model to the nearly neutral theory of molecular evolution.
+SN  - 1573-6857
+UR  - https://doi.org/10.1023/A:1017071901530
+DO  - 10.1023/A:1017071901530
+ID  - Hartl1998
+ER  - 

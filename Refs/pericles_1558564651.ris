@@ -1,0 +1,32 @@
+
+TY  - JOUR
+T1  - MUTATION AND EXTINCTION: THE ROLE OF VARIABLE MUTATIONAL EFFECTS, SYNERGISTIC EPISTASIS, BENEFICIAL MUTATIONS, AND DEGREE OF OUTCROSSING
+AU  - Schultz, Stewart T.
+AU  - Lynch, Michael
+Y1  - 1997/10/01
+PY  - 1997
+DA  - 1997/10/01
+N1  - https://doi.org/10.1111/j.1558-5646.1997.tb01459.x
+DO  - https://doi.org/10.1111/j.1558-5646.1997.tb01459.x
+T2  - Evolution
+JF  - Evolution
+JO  - Evolution
+JA  - Evolution
+SP  - 1363
+EP  - 1371
+VL  - 51
+IS  - 5
+KW  - Effective population size
+KW  - epistasis
+KW  - extinction
+KW  - genetic drift
+KW  - mutation
+KW  - outcrossing
+KW  - selfing
+PB  - John Wiley & Sons, Ltd
+SN  - 0014-3820
+M3  - https://doi.org/10.1111/j.1558-5646.1997.tb01459.x
+UR  - https://doi.org/10.1111/j.1558-5646.1997.tb01459.x
+Y2  - 2021/04/05
+N2  - Recent theoretical studies have illustrated the potential role of spontaneous deleterious mutation as a cause of extinction in small populations. However, these studies have not addressed several genetic issues, which can in principle have a substantial influence on the risk of extinction. These include the presence of synergistic epistasis, which can reduce the rate of mutation accumulation by progressively magnifying the selective effects of mutations, and the occurrence of beneficial mutations, which can offset the effects of previous deleterious mutations. In stochastic simulations of small populations (effective sizes on the order of 100 or less), we show that both synergistic epistasis and the rate of beneficial mutation must be unrealistically high to substantially reduce the risk of extinction due to random fixation of deleterious mutations. However, in analytical calculations based on diffusion theory, we show that in large, outcrossing populations (effective sizes greater than a few hundred), very low levels of beneficial mutation are sufficient to prevent mutational decay. Further simulation results indicate that in populations small enough to be highly vulnerable to mutational decay, variance in deleterious mutational effects reduces the risk of extinction, assuming that the mean deleterious mutational effect is on the order of a few percent or less. We also examine the magnitude of outcrossing that is necessary to liberate a predominantly selfing population from the threat of long-term mutational deterioration. The critical amount of outcrossing appears to be greater than is common in near-obligately selfing plant species, supporting the contention that such species are generally doomed to extinction via random drift of new mutations. Our results support the hypothesis that a long-term effective population size in the neighborhood of a few hundred individuals defines an approximate threshold, below which outcrossing populations are vulnerable to extinction via fixation of deleterious mutations, and above which immunity is acquired.
+ER  - 

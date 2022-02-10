@@ -1,0 +1,13 @@
+TY  - JOUR
+T1  - The Distribution of Fitness Effects Among Beneficial Mutations
+JF  - Genetics
+JO  - Genetics
+SP  - 1519
+LP  - 1526
+VL  - 163
+IS  - 4
+AU  - Orr, H. Allen
+Y1  - 2003/04/01
+UR  - http://www.genetics.org/content/163/4/1519.abstract
+N2  - We know little about the distribution of fitness effects among new beneficial mutations, a problem that partly reflects the rarity of these changes. Surprisingly, though, population genetic theory allows us to predict what this distribution should look like under fairly general assumptions. Using extreme value theory, I derive this distribution and show that it has two unexpected properties. First, the distribution of beneficial fitness effects at a gene is exponential. Second, the distribution of beneficial effects at a gene has the same mean regardless of the fitness of the present wild-type allele. Adaptation from new mutations is thus characterized by a kind of invariance: natural selection chooses from the same spectrum of beneficial effects at a locus independent of the fitness rank of the present wild type. I show that these findings are reasonably robust to deviations from several assumptions. I further show that one can back calculate the mean size of new beneficial mutations from the observed mean size of fixed beneficial mutations.
+ER  - 

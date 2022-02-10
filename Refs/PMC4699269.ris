@@ -1,0 +1,29 @@
+TY  - JOUR
+DB  - PubMed
+AU  - Tenaillon, O
+T1  - The Utility of Fisher's Geometric Model in Evolutionary Genetics
+LA  - eng
+SN  - 1543-592X
+SN  - 1545-2069
+Y1  - 2014/11/01
+AB  - The accumulation of data on the genomic bases of adaptation has triggered renewed interest in theoretical models of adaptation. Among these models, Fisher Geometric Model (FGM) has received a lot of attention over the last two decades. FGM is based on a continuous multidimensional phenotypic landscape, but it is for the emerging properties of individual mutation effects that it is mostly used. Despite an apparent simplicity and a limited number of parameters, FGM integrates a full model of mutation and epistatic interactions that allows the study of both beneficial and deleterious mutations, and subsequently the fate of evolving populations. In this review, I present the different properties of FGM and the qualitative and quantitative support they have received from experimental evolution data. I later discuss how to estimate the different parameters of the model and outline some future directions to connect FGM and the molecular determinants of adaptation.
+SP  - 179
+EP  - 201
+VL  - 45
+AN  - 26740803
+UR  - https://pubmed.ncbi.nlm.nih.gov/26740803
+DO  - 10.1146/annurev-ecolsys-120213-091846
+L2  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4699269/
+U1  - 26740803[pmid]
+U2  - PMC4699269[pmcid]
+J2  - Annu Rev Ecol Evol Syst
+JF  - Annual review of ecology, evolution, and systematics
+KW  - Fisher’s Geometric model
+KW  - adaptive landscape
+KW  - distribution of fitness effects
+KW  - drift load
+KW  - epistasis
+KW  - phenotypic complexity
+KW  - pleiotropy
+KW  - robustness
+ER  - 
